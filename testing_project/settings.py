@@ -24,7 +24,7 @@ SECRET_KEY = 'iot4b8e(!!gue3-fx&+s=8rrab=-91i6mf1(-nro4z$l2=dk@r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app1'
 ]
 
 MIDDLEWARE = [
