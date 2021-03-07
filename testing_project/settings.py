@@ -25,8 +25,6 @@ SECRET_KEY = 'iot4b8e(!!gue3-fx&+s=8rrab=-91i6mf1(-nro4z$l2=dk@r'
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
-
 # Application definition
 
 INSTALLED_APPS = [
