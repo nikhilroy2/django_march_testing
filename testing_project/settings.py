@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from django import django_heroku
+import django_heroku
+django_heroku.settings(locals())
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-django_heroku.settings(locals())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -23,7 +24,7 @@ django_heroku.settings(locals())
 SECRET_KEY = 'iot4b8e(!!gue3-fx&+s=8rrab=-91i6mf1(-nro4z$l2=dk@r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 

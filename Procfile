@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn testing_project.wsgi
