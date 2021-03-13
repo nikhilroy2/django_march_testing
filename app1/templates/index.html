@@ -2,43 +2,40 @@
 
 
 {% block content %}
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" id="navId">
-    <li class="nav-item">
-        <a href="#tab1Id" class="nav-link active">Active</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#tab2Id">Action</a>
-            <a class="dropdown-item" href="#tab3Id">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#tab4Id">Action</a>
+
+
+<h2 class="text-center">Header</h2>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+                <i class="fas fa-bars    "></i>
+            </button>
+            <div class="navbar-collapse collapse" id="navCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item "><a href="#" class="nav-link active"> Home </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"> Menu </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"> Contact </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"> Page </a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown"  id="navbarDropdown"> Blogs </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li class="dropdown-item">Lorem, ipsum dolor.</li>
+                            <li class="dropdown-item">Ducimus, necessitatibus ut!</li>
+                            <li class="dropdown-item">Voluptas, dolores atque?</li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-item">Pariatur, sequi ex?</li>
+                            <li class="dropdown-item">Pariatur, sequi ex?</li>
+                            <li class="dropdown-item">Pariatur, sequi ex?</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+           
         </div>
-    </li>
-    <li class="nav-item">
-        <a href="#tab5Id" class="nav-link">Another link</a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link disabled">Disabled</a>
-    </li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-    <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-</div>
-
-<script>
-    $('#navId a').click(e => {
-        e.preventDefault();
-        $(this).tab('show');
-    });
-</script>
+    </nav>
+</header>
 
 {% endblock content %}
