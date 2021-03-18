@@ -1,0 +1,34 @@
+<section class="section__read">
+    <div class="container-md">
+        <table class="table table-light shadow">
+            <h2 class="text-center">READ</h2>
+            <thead>
+                <tr>
+                    <th class="ripple d-table-cell">First name</th>
+                    <th class="ripple d-table-cell">Last name</th>
+                    <th class="ripple d-table-cell">Email</th>
+                    <th class="ripple d-table-cell">Date</th>
+                    <th class="ripple d-table-cell">Control</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for view in view_forms %}
+
+                <tr>
+                    <td class="d-table-cell ripple"> {{view.firstName}} </td>
+                    <td class="d-table-cell ripple"> {{view.lastName}} </td>
+                    <td class="d-table-cell ripple"> {{view.email}} </td>
+                    <td class="d-table-cell ripple"> {{view.date}} </td>
+                    <td class="d-table-cell ripple"> 
+                    <div class="button btn-group">
+                        <a href="edit/{{view.id}}" class="btn btn-info"> <i class="fas fa-edit    "></i> </a>
+                        <a href="delete/{{view.id}}" class="btn btn-danger"><i class="fas fa-trash    "></i></a>
+                    </div> 
+                    </td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>

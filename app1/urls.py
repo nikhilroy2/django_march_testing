@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.Index, name="home"),
-    path('shorten', views.short_url, name="shortUrl"),
-    path('<str:hash_id>/', views.redirector, name="redirector")
+    path('edit/<str:pk>', views.edit, name="edit"),
+    path('delete/<str:pk>', views.delete, name="delete")
 ]

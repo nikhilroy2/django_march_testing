@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<section class="section__update">
+    <div class="container-fluid">
+        <h2 class="text-center">Edit Post</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for create in create %}
+            <div class="form-group">
+                {{create.label_tag}}
+                {{create|add_class:"form-control"}}
+            </div>
+                {% endfor %}
+        </form>
+    </div>
+</section>
+
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% load widget_tweaks %}
+<section class="section__create">
+    <div class="container-md">
+        
+        <form action="" class="shadow p-3" method="POST">
+            <h2 class="text-center my-2">
+                CREATE
+            </h2>
+            {% csrf_token %}
+            {% for form in create_forms %}
+            <div class="form-group mb-2">
+                {{form.label_tag}}
+                {{form|add_class:'form-control border border-primary'}}
+            </div>
+            {% endfor %}
+            <button data-ripple-color="primary" type="submit" class="btn btn-outline-success">
+                Submit
+            </button>
+        </form>
+    </div>
+</section>
