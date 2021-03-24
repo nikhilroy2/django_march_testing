@@ -6,6 +6,8 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.views.decorators.csrf import csrf_exempt
 from .forms import create_forms
 from .models import CRUD_Create
+from django.contrib.auth.models import User
+print(User)
 # Create your views here.
 def Index(request):
     if request.method == 'POST':
